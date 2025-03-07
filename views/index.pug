@@ -1,0 +1,329 @@
+doctype html
+html(lang="vi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Sự chuẩn bị về tổ chức của Nguyễn Ái Quốc
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+    style.
+      :root {
+        --primary-color: #c9151b;
+        --secondary-color: #ffcd00;
+        --dark-color: #333;
+        --light-color: #f8f9fa;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--light-color);
+        color: var(--dark-color);
+      }
+      
+      .header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('https://via.placeholder.com/1200x400') center/cover;
+        opacity: 0.2;
+        z-index: 0;
+      }
+      
+      .header-content {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+      
+      .timeline::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 4px;
+        background-color: var(--primary-color);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+      
+      .timeline-item {
+        margin-bottom: 3rem;
+        position: relative;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: auto;
+        margin-right: 4rem;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-right: auto;
+        margin-left: 4rem;
+      }
+      
+      .timeline-dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem;
+        border: 4px solid var(--primary-color);
+      }
+      
+      .timeline-year {
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-year {
+        left: calc(50% + 30px);
+      }
+      
+      .timeline-item:nth-child(even) .timeline-year {
+        left: calc(50% - 110px);
+      }
+      
+      .timeline-content {
+        max-width: 45%;
+        padding: 1.5rem;
+        border-radius: 6px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 20px rgba(0,0,0,0.15);
+      }
+      
+      .timeline-title {
+        color: var(--primary-color);
+        font-weight: bold;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--secondary-color);
+      }
+      
+      .timeline-content ul {
+        padding-left: 1.2rem;
+      }
+      
+      .conclusion {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 3rem 0;
+        margin-top: 3rem;
+      }
+      
+      .conclusion-card {
+        background-color: rgba(255,255,255,0.1);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+      
+      .conclusion-title {
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        font-weight: bold;
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+      }
+      
+      .footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .timeline::before {
+          left: 40px;
+        }
+        
+        .timeline-dot {
+          left: 40px;
+        }
+        
+        .timeline-year {
+          left: 40px;
+          top: -25px;
+          transform: none;
+        }
+        
+        .timeline-content {
+          max-width: calc(100% - 80px);
+          margin-left: 80px !important;
+          margin-right: 0 !important;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year,
+        .timeline-item:nth-child(even) .timeline-year {
+          left: 40px;
+        }
+      }
+      
+      /* Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .fade-in {
+        animation: fadeIn 1s ease forwards;
+      }
+      
+  body
+    // Header Section
+    header.header
+      .container.header-content
+        .row
+          .col-md-12.text-center
+            h1.display-4.fw-bold Sự chuẩn bị về tổ chức của Nguyễn Ái Quốc
+            p.lead.mt-3 Quá trình tìm đường cứu nước (1925-1945)
+    
+    // Main Content
+    main.container.my-5
+      // Introduction
+      section.mb-5.fade-in
+        .row
+          .col-md-12
+            .card
+              .card-body
+                h2.card-title.text-center Giới thiệu
+                p.card-text Nguyễn Ái Quốc, sau này là Chủ tịch Hồ Chí Minh, đã có những đóng góp to lớn trong việc thành lập và định hướng cho nhiều tổ chức cách mạng. Những tổ chức này đã đóng vai trò quan trọng trong tiến trình lịch sử cách mạng Việt Nam, dẫn đến sự ra đời của Đảng Cộng sản Việt Nam và thành công của Cách mạng Tháng Tám năm 1945.
+      
+      // Timeline
+      section.timeline
+        // 1. Hội Việt Nam Cách mạng Thanh niên
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1925
+          .timeline-content
+            h3.timeline-title Hội Việt Nam Cách mạng Thanh niên
+            p Thành lập tại Quảng Châu (Trung Quốc)
+            p Tổ chức này đóng vai trò quan trọng trong việc truyền bá tư tưởng cách mạng và là tiền thân của Đảng Cộng sản Việt Nam.
+        
+        // 2. Tân Việt Cách mạng Đảng
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1925
+          .timeline-content
+            h3.timeline-title Tân Việt Cách mạng Đảng
+            ul
+              li Tân Việt (tiền thân Phục Việt, 1925) ban đầu yêu nước, sau ảnh hưởng Nguyễn Ái Quốc, chuyển hướng xã hội chủ nghĩa.
+              li Thành phần chủ yếu là thanh niên trí thức, công nhân, tiểu thương, học sinh.
+              li Đảng chủ trương liên kết quần chúng trong và ngoài nước, đấu tranh chống đế quốc, xây dựng xã hội bình đẳng, bác ái.
+              li Kết quả: Tân Việt phân hóa, một bộ phận theo Mác - Lênin, góp phần hình thành lực lượng tiền thân của Đảng Cộng sản Việt Nam (1930).
+        
+        // 3. Đông Dương Cộng sản Đảng
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1929
+          .timeline-content
+            h3.timeline-title Đông Dương Cộng sản Đảng
+            p Hình thành từ Hội Việt Nam Cách mạng Thanh niên
+            p Nguyễn Ái Quốc không trực tiếp thành lập nhưng có vai trò định hướng tư tưởng.
+            p Tổ chức này hoạt động bí mật, tuyên truyền chủ nghĩa Mác-Lênin
+            p Mở lớp huấn luyện, kết nạp hội viên và xây dựng cơ sở cách mạng
+            p Tạo tiền đề cho sự ra đời của Đảng Cộng sản Việt Nam (1930).
+        
+        // 4. Đảng Cộng sản Việt Nam
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1930
+          .timeline-content
+            h3.timeline-title Đảng Cộng sản Việt Nam
+            p Ngày 3/2/1930, tại Cửu Long (Hồng Kông), Nguyễn Ái Quốc chủ trì hội nghị hợp nhất ba tổ chức cộng sản:
+            ul
+              li Đông Dương Cộng sản Đảng
+              li An Nam Cộng sản Đảng
+              li Đông Dương Cộng sản Liên đoàn
+            p Đảng ra đời đánh dấu bước ngoặt trong phong trào cách mạng Việt Nam.
+        
+        // 5. Mặt trận Việt Minh
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1941
+          .timeline-content
+            h3.timeline-title Mặt trận Việt Minh
+            p Thành lập ngày 19/5/1941 tại Pác Bó (Cao Bằng), do Nguyễn Ái Quốc trực tiếp lãnh đạo.
+            p Lãnh đạo Cách mạng Tháng Tám 1945, dẫn đến sự ra đời của nước Việt Nam Dân chủ Cộng hòa.
+        
+        // 6. Chính phủ Việt Nam Dân chủ Cộng hòa
+        .timeline-item.fade-in
+          .timeline-dot
+          .timeline-year 1945
+          .timeline-content
+            h3.timeline-title Chính phủ Việt Nam Dân chủ Cộng hòa
+            p Ngày 2/9/1945, Nguyễn Ái Quốc tuyên bố độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa và trở thành Chủ tịch nước đầu tiên.
+      
+      // Conclusion Section
+      section.conclusion
+        .container
+          .row
+            // Mục đích
+            .col-md-6
+              .conclusion-card
+                h3.conclusion-title Mục đích
+                p Đây là phần mục đích
+            
+            // Ý nghĩa
+            .col-md-6
+              .conclusion-card
+                h3.conclusion-title Ý nghĩa
+                p Đây là phần ý nghĩa
+    
+    // Footer
+    footer.footer
+      .container
+        p © 2025 - Design by Cao Tri Ngoc
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js")
+    script.
+      // Add fade-in animation to elements when they come into view
+      document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+          element.style.opacity = 0;
+          element.style.transform = 'translateY(20px)';
+          element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          observer.observe(element);
+        });
+      });
