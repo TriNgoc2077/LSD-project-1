@@ -18,7 +18,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: url('http://xuanan.nghixuan.hatinh.gov.vn/upload/105329/20230927/6fead674aa83cf5c800ffd6a00adf5ae77d5063829t2646l18.jpg') center/cover no-repeat;
+        background: url('./images//ho-chi-minh.jpg') center/cover no-repeat;
         opacity: 0.12;
         z-index: -1;
       }
