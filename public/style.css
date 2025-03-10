@@ -200,7 +200,13 @@
         border-left: 4px solid var(--primary-color);
         margin: 2rem 0;
       }
-      
+      .timeline h5 {
+        color:rgb(45, 73, 199);
+      }
+
+      .conclusion h5 {
+        color:#ffcd00;
+      }
       .main-container {
       }
       
